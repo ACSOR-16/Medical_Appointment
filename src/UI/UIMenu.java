@@ -16,7 +16,7 @@ public class UIMenu {
             System.out.println("2. Patient");
             System.out.println("0. exit");
 
-            Scanner scanner = new Scanner();
+            Scanner scanner = new Scanner(System.in);
             response = Integer.valueOf((scanner.nextLine()));
 
             switch (response) {
@@ -36,4 +36,7 @@ public class UIMenu {
         } while (response != 0);
     }
 
+    public static void showPatientMenu() {
+        System.out.println("we're building");
+    }
 }
