@@ -52,7 +52,7 @@ public class UIMenu {
             switch (response) {
                 case 1:
                     System.out.println("BOOK AN APPOINTMENT");
-                    for (int i = 0; i < 4; i++) {
+                    for (int i = 0; i < 3; i++) {
                         System.out.println(i + ". " + MONTHS[i]);
                     }
                     break;
