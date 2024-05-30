@@ -38,5 +38,31 @@ public class UIMenu {
 
     public static void showPatientMenu() {
         System.out.println("we're building");
+        int response = 0;
+        do {
+            System.out.println("\n\n");
+            System.out.println("patient");
+            System.out.println("1. Book an appointment");
+            System.out.println("2. My appointment");
+            System.out.println("0. return");
+
+            Scanner scanner = new Scanner(System.in);
+            response = Integer.valueOf(scanner.nextLine());
+
+            switch (response) {
+                case 1:
+                    System.out.println("BOOK AN APPOINTMENT");
+                    for (int i = 0; i < 4; i++) {
+                        System.out.println(i + ". " + MONTHS[i]);
+                    }
+                    break;
+                case 2:
+                    System.out.println("MY APPOINTMENTS");
+                    break;
+                case 0:
+                    showMenu();
+                    break;
+            }
+        } while (response != 0);
     }
 }
