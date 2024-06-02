@@ -1,7 +1,7 @@
 public class Doctor {
     static int id = 0;
-    String name;
-    String speciality;
+    private String name;
+    private String speciality;
 
     Doctor() {
         System.out.println("We're building the doctor object");
@@ -14,8 +14,20 @@ public class Doctor {
         this.speciality = speciality;
     }
 
-    public void showName() {
-        System.out.println(name);
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
     }
 
     public void showId() {

@@ -5,8 +5,8 @@ public class Main {
 //        showMenu();
 
         Doctor myDoctor = new Doctor("Jean Cris", "Cardiology");
-        System.out.println(myDoctor.name);
-        System.out.println(myDoctor.speciality);
+        System.out.println(myDoctor.getName());
+        System.out.println(myDoctor.getSpeciality());
 
         Patient patient = new Patient("Alejandro", "alejandro@gmail.com");
         patient.setHeight(178);
