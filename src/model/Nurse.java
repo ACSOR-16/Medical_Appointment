@@ -6,7 +6,7 @@ public class Nurse extends User {
     public Nurse(String name, String email) {
         super(name, email);
     }
-    
+
     public String getSpeciality() {
         return speciality;
     }
