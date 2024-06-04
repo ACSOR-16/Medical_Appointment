@@ -54,4 +54,10 @@ public class User {
             System.out.println("the number is not correct");
         }
     }
+
+    @Override
+    public String toString() {
+        return "User: " + getName() + ", Email: "+ getEmail() +
+                "\nAddress: "+ getAddress() + ", Phone: " + getPhoneNumber();
+    }
 }
