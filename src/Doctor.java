@@ -6,7 +6,6 @@ public class Doctor extends User{
 
     Doctor(String name, String email) {
         super(name, email);
-        this.speciality = speciality;
     }
 
     public String getSpeciality() {
@@ -18,6 +17,12 @@ public class Doctor extends User{
     }
 
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpeciality: " + getSpeciality() +
+                "\nAvailable: " + availableAppointments.toString();
+    }
 
     public void addAvailableAppointment(Date date, String time) {
         availableAppointments.add(new Doctor.AvailableAppointment(date, time));
@@ -59,6 +64,12 @@ public class Doctor extends User{
 
         public void setTime(String time) {
             this.time = time;
+        }
+
+        @Override
+        public String toString() {
+            return "\nAvailable Appointment \nDate: " + getDate() +
+                    "\nTime: " + getTime();
         }
     }
 }

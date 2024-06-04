@@ -26,12 +26,14 @@ public class Main {
     public static void main(String[] args) {
 //        showMenu();
 
-        Doctor myDoctor = new Doctor("Jean Cris", "Cardiology");
+        Doctor myDoctor = new Doctor("Jean Cris", "jeanCris@hotmail.com");
+        myDoctor.setSpeciality("Cardiology");
         myDoctor.addAvailableAppointment(new Date(), "8:00 am");
         myDoctor.addAvailableAppointment(new Date(), "10:00 am");
         myDoctor.addAvailableAppointment(new Date(), "12:00 am");
+        System.out.println(myDoctor);
 
-        System.out.println(myDoctor.getAvailableAppointments());
+        /*System.out.println(myDoctor.getAvailableAppointments());
         for (Doctor.AvailableAppointment availableAppointment: myDoctor.getAvailableAppointments()) {
             System.out.println(availableAppointment.getDate() + " " + availableAppointment.getTime());
         }
