@@ -1,6 +1,6 @@
 package model;
 
-public class User {
+public abstract class User {
     private int id;
     private String name;
     private String email;
@@ -56,6 +56,8 @@ public class User {
             System.out.println("the number is not correct");
         }
     }
+
+    public abstract void showData();
 
     @Override
     public String toString() {

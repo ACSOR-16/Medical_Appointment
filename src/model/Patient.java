@@ -7,7 +7,7 @@ public class Patient extends User{
     private String blood;
 
 //    CONSTRUCTOR METHOD
-    Patient(String name, String email){
+    public Patient(String name, String email){
         super(name, email);
     }
 
@@ -41,6 +41,11 @@ public class Patient extends User{
 
     public void setBlood(String blood) {
         this.blood = blood;
+    }
+
+    @Override
+    public void showData() {
+        System.out.println("patient since 1998");
     }
 
     @Override

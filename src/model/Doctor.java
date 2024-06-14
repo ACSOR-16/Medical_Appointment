@@ -6,8 +6,13 @@ import java.util.Date;
 public class Doctor extends User{
     private String speciality;
 
-    Doctor(String name, String email) {
+    public Doctor(String name, String email) {
         super(name, email);
+    }
+
+    @Override
+    public void showData() {
+        System.out.println("Here, we need help with patient");
     }
 
     public String getSpeciality() {

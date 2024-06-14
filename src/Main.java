@@ -1,5 +1,6 @@
 import model.Doctor;
 import model.Patient;
+import model.User;
 
 import java.util.Date;
 
@@ -50,5 +51,8 @@ public class Main {
         patient.setWeight(72);
         patient.setPhoneNumber("985805050");
         System.out.println(patient);
+
+        User user = new Doctor("Mimi", "mimi@gamil.com");
+        user.showData();
     }
 }
