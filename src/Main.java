@@ -1,6 +1,4 @@
-import model.Doctor;
-import model.Patient;
-import model.User;
+import model.*;
 
 import java.util.Date;
 
@@ -54,5 +52,15 @@ public class Main {
 
         User user = new Doctor("Mimi", "mimi@gamil.com");
         user.showData();
+        User user1 = new User("robert", "rob@gmail.com") {
+            @Override
+            public void showData() {
+                System.out.println("puede ser un doctor \nhospital: Blue east \nDepartment: general medicine");
+            }
+        };
+        user1.showData();
+
+        ISchedulable iSchedulable = new AppointmentDoctor();
+        iSchedulable.schedule(new Date(),"14:00");
     }
 }
