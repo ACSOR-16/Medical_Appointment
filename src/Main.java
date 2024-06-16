@@ -2,6 +2,8 @@ import model.*;
 
 import java.util.Date;
 
+import static UI.UIMenu.showMenu;
+
 public class Main {
 
     public enum Day{
@@ -24,11 +26,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-//        showMenu();
-
+        showMenu();
+        /*
         Doctor myDoctor = new Doctor("Jean Cris", "jeanCris@hotmail.com");
         myDoctor.setSpeciality("Cardiology");
-        /*
+
         myDoctor.addAvailableAppointment(new Date(), "8:00 am");
         myDoctor.addAvailableAppointment(new Date(), "10:00 am");
         myDoctor.addAvailableAppointment(new Date(), "12:00 am");
@@ -44,7 +46,7 @@ public class Main {
         System.out.println(Day.SUNDAY);
         System.out.println(myDoctor.getName());
         System.out.println(myDoctor.getSpeciality());
-        */
+
         Patient patient = new Patient("Alejandro", "alejandro@gmail.com");
         patient.setHeight(178);
         patient.setWeight(72);
@@ -63,5 +65,6 @@ public class Main {
 
         ISchedulable iSchedulable = new AppointmentDoctor();
         iSchedulable.schedule(new Date(),"14:00");
+        */
     }
 }

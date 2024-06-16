@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class UIMenu {
     public static final String[] MONTHS = {"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"};
     public static Doctor doctorLogged;
-    private static Patient patientLogged;
+    public static Patient patientLogged;
 
     public static void showMenu() {
         System.out.println("Welcome to My Appointment");
@@ -19,8 +19,8 @@ public class UIMenu {
         int response = 0;
 
         do {
-            System.out.println("1. model.Doctor");
-            System.out.println("2. model.Patient");
+            System.out.println("1. Doctor");
+            System.out.println("2. Patient");
             System.out.println("0. exit");
 
             Scanner scanner = new Scanner(System.in);
@@ -71,6 +71,7 @@ public class UIMenu {
                         emailCorrect = true;
 
                         doctorLogged = doctor;
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
             }
