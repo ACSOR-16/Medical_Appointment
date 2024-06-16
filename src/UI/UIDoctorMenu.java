@@ -1,8 +1,13 @@
 package UI;
 
+import model.Doctor;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UIDoctorMenu {
+    public static ArrayList<Doctor> doctorsAvailableAppointments = new ArrayList<>();
+
     public static void showDoctorMenu() {
         int response = 0;
 
@@ -52,9 +57,28 @@ public class UIDoctorMenu {
 
                 String dateSelected = scanner.nextLine();
                 System.out.println("Your date is: " + dateSelected + "\n1. Correct \n2. Change date");
+
+                int responseDate = Integer.valueOf(scanner.nextLine());
+                if (responseDate == 2) continue;;
+
+                int responseTime = 0;
+                do {
+                    System.out.println("Insert the time available fot date: " + dateSelected + " [16:00]");
+                    String time = scanner.nextLine();
+
+                    System.out.println("Your time is: " + time + "\n1. Correct \n2. Change time");
+                    responseTime = Integer.valueOf(scanner.nextLine());
+                } while (responseTime == 2);
+
             } else if (response == 0) {
                 showDoctorMenu();
             }
         } while (response != 0);
+    }
+
+    private static void checkDoctorAvailableAppointment(Doctor doctor) {
+        if (doctor.getAvailableAppointments().size() > 0 && !doctorsAvailableAppointments.contains(doctor)) {
+            doctorsAvailableAppointments.add(doctor);
+        }
     }
 }

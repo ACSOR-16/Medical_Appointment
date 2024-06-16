@@ -28,12 +28,13 @@ public class Main {
 
         Doctor myDoctor = new Doctor("Jean Cris", "jeanCris@hotmail.com");
         myDoctor.setSpeciality("Cardiology");
+        /*
         myDoctor.addAvailableAppointment(new Date(), "8:00 am");
         myDoctor.addAvailableAppointment(new Date(), "10:00 am");
         myDoctor.addAvailableAppointment(new Date(), "12:00 am");
         System.out.println(myDoctor);
 
-        /*System.out.println(myDoctor.getAvailableAppointments());
+        System.out.println(myDoctor.getAvailableAppointments());
         for (model.Doctor.AvailableAppointment availableAppointment: myDoctor.getAvailableAppointments()) {
             System.out.println(availableAppointment.getDate() + " " + availableAppointment.getTime());
         }
@@ -41,7 +42,7 @@ public class Main {
         System.out.println(Day.FRIDAY.spanish);
         System.out.println(Day.SATURDAY.getSpanish());
         System.out.println(Day.SUNDAY);
-        /*System.out.println(myDoctor.getName());
+        System.out.println(myDoctor.getName());
         System.out.println(myDoctor.getSpeciality());
         */
         Patient patient = new Patient("Alejandro", "alejandro@gmail.com");
